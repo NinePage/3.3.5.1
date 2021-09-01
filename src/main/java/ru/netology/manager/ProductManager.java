@@ -34,7 +34,7 @@ public class ProductManager {
     public boolean matches(Product product, String search) {
         if (product instanceof Book) {
             Book book = (Book) product;
-            if (((Book) product).getAuthor().contains(search)) {
+            if (book.getAuthor().contains(search)) {
                 return true;
             }
             if (product.getName().contains(search)) {
@@ -43,8 +43,8 @@ public class ProductManager {
             return false;
         }
         if (product instanceof Smartphone) {
-            Smartphone book = (Smartphone) product;
-            if (((Smartphone) product).getProducer().contains(search)) {
+            Smartphone smartphone = (Smartphone) product;
+            if (smartphone.getProducer().contains(search)) {
                 return true;
             }
             if (product.getName().contains(search)) {
